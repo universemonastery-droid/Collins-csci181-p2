@@ -1,0 +1,108 @@
+/*Written by Ryan Collins*/
+:root {
+  --primary: #19560e;
+  --bg: #3f70a165;
+  --text: #430751;
+  --card-bg: #797a7a;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 1.5rem;
+}
+/*Filter Chips*/
+.filter {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.chip {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.chip:hover,
+.chip:focus-visible {
+  background-color: #dae9fe;
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+.chip.is-active {
+  background-color: var(--primary);
+  color: white;
+}
+
+/*Grid for project cards*/
+.project_list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+/*Project cards*/
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  height: 100%;
+  transition:
+    transform 0.2 ease,
+    box-shadow 0.2 ease;
+}
+.project-card:hover,
+.project-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(14, 46, 0);
+  outline: 3px solid rgb(33, 143, 70);
+  outline-offset: 4px;
+}
+.card-content {
+  padding: 1.25rem;
+}
+.card-image {
+  width: 100%;
+  height: 160px;
+  background-color: #cbd5e1;
+  object-fit: cover;
+}
+.card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+.card-description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.card-catagory {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
